@@ -1,10 +1,11 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import React from 'react';
+import { View, Text, Image, StyleSheet } from 'react-native';
+import Header from './components/Header'
 
 const App = () => {
   return (
     <View style={Styles.container}>
-      <Text style={Styles.text}>Hello World</Text>
+      <Header />
       <Image source={{uri: 'https://res.cloudinary.com/dcyxkrt7p/image/upload/v1598298388/CatIcon.png'}} style={Styles.img} />
     </View>
   )
@@ -13,8 +14,9 @@ const App = () => {
 const Styles = StyleSheet.create({
   container: {
     flex: 1, 
-    justifyContent: 'center',
-    alignItems: 'center',
+    // paddingTop: 60,
+    // justifyContent: 'center',
+    // alignItems: 'center',
   }, 
   text: {
     color: 'darkslateblue',
