@@ -7,7 +7,7 @@ const ListItem = (props) => {
     <TouchableOpacity style={Styles.listItem}>
         <View style={Styles.listItemView}>
           <Text style={Styles.listItemText}>{props.item.text}</Text>
-          <Icon name="remove" size={20} color="firebrick" />
+          <Icon name="remove" size={20} color="firebrick" onPress={()=> props.deleteItem(props.item.id)} />
           </View>
       </TouchableOpacity>
   )
