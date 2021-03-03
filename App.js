@@ -3,9 +3,11 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 import Header from './components/Header'
 
 const App = () => {
+
+  
   return (
     <View style={Styles.container}>
-      <Header />
+      <Header title="Shopping List"/>
     </View>
   )
 }
