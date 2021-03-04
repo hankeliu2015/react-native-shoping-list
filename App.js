@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Alert } from 'react-native';
 import Header from './components/Header'; 
 import ListItem from './components/ListItem'
 import AddItem from './components/AddItem'
@@ -19,10 +19,21 @@ const App = () => {
     })
   }
 
+
+  const addItem = text => {
+    if (!text) {
+      Alert("Error", "Please enter an Item", {text: "OK"})
+    } else {
+      setItems(prevItems => {
+        return [{id: 5, text}, ...prevItems];
+      });
+    }
+  }
+
   return (
     <View style={Styles.container}>
       <Header title="Shopping List"/>
-      <AddItem />
+      <AddItem addItem={addItem} />
       <FlatList 
         data={items}
         renderItem={({item}) => <ListItem item={item} deleteItem={deleteItem} />} 
