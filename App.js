@@ -19,7 +19,6 @@ const App = () => {
     })
   }
 
-
   const addItem = text => {
     if (!text) {
       Alert("Error", "Please enter an Item", {text: "OK"})
