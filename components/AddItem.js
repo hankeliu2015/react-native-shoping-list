@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 const AddItem = (props) => {
   return (
     <View>
-      <TextInput placeholder="Add Item..." style={style.input} />
+      <TextInput placeholder="Add Item..." style={Styles.input} />
       <TouchableOpacity style={Styles.btn}>
         <Text style={Styles.btnText}>
           <Icon name="plus" size={20} />
@@ -19,7 +19,7 @@ const AddItem = (props) => {
 const Styles = StyleSheet.create({
   input: {
     height: 60, 
-    pading: 8, 
+    padding: 8, 
     fontSize: 16
   },
   btn: {
